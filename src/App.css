@@ -1,0 +1,212 @@
+#root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  text-align: initial;
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Mobile-first layout */
+.page {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+}
+
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 0, 100, 0.08);
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.title {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 6vw, 44px);
+  line-height: 1.05;
+}
+
+.subtitle {
+  margin: 0 0 16px;
+  font-size: clamp(16px, 2.8vw, 18px);
+  opacity: 0.9;
+}
+
+.formRow {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.input:focus {
+  border-color: rgba(255, 0, 100, 0.5);
+}
+
+.buttonRow {
+  display: grid;
+  gap: 10px;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn.primary {
+  border: none;
+  background: #ff2d6f;
+  color: white;
+  font-weight: 700;
+}
+
+.btn.ghost {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.btn.link {
+  margin-top: 10px;
+  background: transparent;
+  border: none;
+  text-decoration: underline;
+  padding: 10px;
+}
+
+.tiny {
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* Make No match the Valentine aesthetic */
+.noBtn {
+  background: rgba(255, 45, 111, 0.08);
+  border: 1px solid rgba(255, 45, 111, 0.25);
+  font-weight: 700;
+}
+
+/* When floating, it should look intentional */
+.noBtn.floating {
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+}
+
+
+/* ===== Details page car graphic ===== */
+
+.carScene {
+  position: relative;
+  margin-top: 18px;
+  height: 90px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 45, 111, 0.06); /* soft valentine tint */
+  border: 1px solid rgba(255, 45, 111, 0.14);
+}
+
+.road {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.car {
+  position: absolute;
+  bottom: 6px;
+  left: -120px;
+  animation: carDrive 3.2s linear infinite;
+}
+
+.carSvg {
+  width: 120px;
+  height: auto;
+}
+
+.carSvg rect {
+  fill: #ff2d6f; /* matches your primary button */
+}
+
+.carSvg circle {
+  fill: rgba(0, 0, 0, 0.65);
+}
+
+@keyframes carDrive {
+  from { transform: translateX(0); }
+  to   { transform: translateX(800px); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .car { animation: none; left: 12px; }
+}
+
+
